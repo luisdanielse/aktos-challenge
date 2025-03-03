@@ -24,6 +24,6 @@ These are the following arguments that can be sent through a GET parameter:
 4. **status**: The status of the debt to filter the data by. 
 
 ####Testing endpoints:
-- http://aktos.danielsotodev.com/accounts/?min_balance=50000
-- http://aktos.danielsotodev.com/accounts/?min_balance=50000&status=inactive
-- http://aktos.danielsotodev.com/accounts/?status=PAID_IN_FULL
+- https://aktos.danielsotodev.com/accounts/?min_balance=50000
+- https://aktos.danielsotodev.com/accounts/?min_balance=50000&status=inactive
+- https://aktos.danielsotodev.com/accounts/?status=PAID_IN_FULL
