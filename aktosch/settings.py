@@ -135,6 +135,10 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
-
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+CSRF_TRUSTED_ORIGINS = ['https://aktos.danielsotodev.com']
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CSRF_COOKIE_NAME = config('CSRF_COOKIE_NAME')
+CSRF_COOKIE_PATH = config('CSRF_COOKIE_PATH')
+CSRF_COOKIE_DOMAIN = config('CSRF_COOKIE_DOMAIN')
+SECURE_SSL_REDIRECT = config('HTTPS', cast=bool)
