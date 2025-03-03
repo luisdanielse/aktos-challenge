@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>WELCOME [COLLECTION_AGENCY]</h1>
+<form id="formNewFile" onsubmit="loadFile();" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="inputFile">Load file</label>
+        <input class="form-control" id="inputFile" name="inputFile" type="file" placeholder="Load CSV File" data-validations="file"/>
+        <div class="invalid-feedback">Please provide a CSV File</div>
+        <button class="btn btn-primary fw-500" type="submit" id="submitBtn" data-validations="none">Load CSV</button>
+    </div>
+</form>
+<script src="{% static 'collection_agency/js/tools/getCookie.js' %}"></script>
+<script src="{% static 'collection_agency/js/tools/fetchRequest.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'collection_agency/js/tools/swalUtils.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="{% static 'collection_agency/js/loadFile.js' %}"></script>
+<script>
+    let wsUploadFile = "{% url 'collection_agency:wsUploadFile' %}";
+</script>
+</body>
+</html>
